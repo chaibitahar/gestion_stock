@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "1adaf680-5a82-4658-aadc-8589265f62d8",
+		"name": "Gestion_Stock_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48888949",
+		"_collection_link": "https://chaibitahar99-2394697.postman.co/workspace/Tahar-Chaibi's-Workspace~a6128a06-51a1-4c97-8e1e-826c2a278a42/collection/48888949-1adaf680-5a82-4658-aadc-8589265f62d8?action=share&source=collection_link&creator=48888949"
+	},
+	"item": [
+		{
+			"name": "categorie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"nom\": \"Électronique\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testes JWT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZUlkIjoxLCJpYXQiOjE3NjMyNzM2MzMsImV4cCI6MTc2MzI3NzIzM30.gA9SceH3rIH_QfwK0b9iMvWlpDshIeF36bi9aKOloGM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/utilisateurs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"utilisateurs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "historiqueStock",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"produitId\": 5, \"quantiteChangee\": -15, \"utilisateurId\": 1 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/stock/historique",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"stock",
+						"historique"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fournisseurs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"nom\": \"MegaDistrib Inc.\", \"contactEmail\": \"support@mega.com\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/fournisseurs/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"fournisseurs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "produits",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"nom\": \"Smartphone X PRO\", \r\n  \"quantite\": 50, \r\n  \"prix\": 999.99, \r\n  \"categorieId\": 2, \r\n  \"fournisseurId\": 1 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/produits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"produits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "utilisateur",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"nom\": \"Test\", \r\n  \"prenom\": \"User\",\r\n  \"email\": \"ceci-nest-pas-un-email\", \r\n  \"motDePasse\": \"123\",\r\n  \"roleId\": 1",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/utilisateurs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"utilisateurs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
