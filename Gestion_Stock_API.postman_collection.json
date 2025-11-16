@@ -189,7 +189,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "\"nom\": \"Test\", \r\n  \"prenom\": \"User\",\r\n  \"email\": \"ceci-nest-pas-un-email\", \r\n  \"motDePasse\": \"123\",\r\n  \"roleId\": 1",
+					"raw": "{ \r\n  \"nom\": \"Test\", \r\n  \"prenom\": \"User\",\r\n  \"email\": \"invalide-email\", \r\n  \"motDePasse\": \"123\",\r\n  \"roleId\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
